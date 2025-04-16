@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+:root {
+  --primary: 212 70% 50%;
+  --primary-foreground: 210 40% 98%;
+  --background: 210 20% 98%;
+  --foreground: 222.2 47.4% 11.2%;
+  --success: 142.1 76.2% 36.3%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+}
+
+.file-drop-zone {
+  @apply border-2 border-dashed border-gray-300 transition-all duration-200;
+}
+
+.file-drop-zone:hover, .file-drop-zone.active {
+  @apply border-primary/80 bg-primary/5;
+}
+
+.resource-meter {
+  @apply h-2 rounded-sm overflow-hidden;
+}
+
+.progress-bar {
+  @apply transition-all duration-300;
+}
